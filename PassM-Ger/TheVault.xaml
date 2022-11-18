@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:PassM_Ger"
+			 x:Class="PassM_Ger.TheVault"
+			 Title="The Vault">
+	<HorizontalStackLayout Padding="10">
+		<VerticalStackLayout HorizontalOptions="Start">
+			<Label x:Name="HeaderLbl"
+				Text="You have no passwords yet"
+				FontSize="Large"/>
+			<ListView x:Name="PasswordListView"
+					  ItemsSource="{x:Static local:TheVault.PasswordPairs}"
+					  ItemSelected="OnPasswordSelected"
+					  HeightRequest="200">
+				<ListView.Header>
+					<Label Margin="10,0"
+						Text="The Vault"
+						FontSize="Large"
+						FontAttributes="Bold"
+						FontFamily="VasekItalic"
+						HorizontalOptions="Center"/>
+				</ListView.Header>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid WidthRequest="400" Padding="10">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto" />
+									<ColumnDefinition Width="Auto" />
+								</Grid.ColumnDefinitions>
+								<Label Grid.Column="1"
+									Text="{Binding Name}"
+									FontAttributes="Bold" />
+								<Label Grid.Row="1"
+									Grid.Column="1"
+									Text="{Binding Value}"
+									VerticalOptions="End" />
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</VerticalStackLayout>
+
+		<VerticalStackLayout Margin="40,0"  HorizontalOptions="End">
+			<Button
+				x:Name="CopyBtn"
+				Text="Copy to clipboard"
+				BackgroundColor="ForestGreen"
+				Clicked="CopyToClipboard"
+				WidthRequest="200"
+				IsEnabled="False"/>
+
+			<Button
+				x:Name="ChangeNameBtn"
+				Text="Change password name"
+				BackgroundColor="ForestGreen"
+				Clicked="ChangeName"
+				WidthRequest="200"
+				IsEnabled="False"/>
+
+			<Button
+				x:Name="ChangePasswordBtn"
+				Text="Change password"
+				BackgroundColor="ForestGreen"
+				Clicked="ChangePassword"
+				WidthRequest="200"
+				IsEnabled="False"/>
+
+			<Button
+				x:Name="DeletePasswordBtn"
+				Text="Delete password"
+				BackgroundColor="ForestGreen"
+				Clicked="RemovePassword"
+				WidthRequest="200"
+				IsEnabled="False"/>
+		</VerticalStackLayout>
+		
+	</HorizontalStackLayout>
+
+
+</ContentPage>

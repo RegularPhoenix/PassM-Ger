@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="PassM_Ger.MainPage"
+			 Title="Password generator">
+
+	<ScrollView>
+		<HorizontalStackLayout
+			Margin="20">
+
+			<Image
+				Source="lock.png"
+				HeightRequest="120"
+				VerticalOptions="Start"/>
+
+			<VerticalStackLayout
+				Padding="20,0">
+
+				<HorizontalStackLayout>
+
+					<VerticalStackLayout>
+						<HorizontalStackLayout>
+							<CheckBox
+								x:Name="IncludeCapitalsCB"
+								Color="ForestGreen"
+								IsChecked="True" />
+							<Label 
+								Text="Include capitals"
+								VerticalOptions="Center" />
+						</HorizontalStackLayout>
+
+						<HorizontalStackLayout>
+							<CheckBox
+								x:Name="IncludeNumbersCB"
+								Color="ForestGreen"
+								IsChecked="True" />
+							<Label 
+								Text="Include numbers"
+								VerticalOptions="Center" />
+						</HorizontalStackLayout>
+
+						<HorizontalStackLayout>
+							<CheckBox
+								x:Name="IncludeSymbolsCB"
+								Color="ForestGreen"
+								IsChecked="True" />
+							<Label 
+								Text="Include symbols"
+								VerticalOptions="Center" />
+						</HorizontalStackLayout>
+					</VerticalStackLayout>
+
+					<VerticalStackLayout>
+						<Entry
+							x:Name="PasswordEnt"
+							VerticalOptions="Start"
+							Margin="26,0"
+							MaxLength="127"
+							Placeholder="Password"
+							ClearButtonVisibility="WhileEditing"
+							HeightRequest="60"
+							WidthRequest="356"
+							FontSize="Large"/>
+
+						<HorizontalStackLayout
+							Padding="44,20">
+							<Label
+								x:Name="LengthLbl"
+								Text="Length: 16"
+								VerticalOptions="Center" />
+							<Stepper
+								Margin="10,0"
+								x:Name="LengthStp"
+								Maximum="127" 
+								Increment="1" 
+								Minimum="8"
+								Value="16"
+								HorizontalOptions="Center"
+								ValueChanged="LengthStp_ValueChanged" />
+						</HorizontalStackLayout>
+					</VerticalStackLayout>
+
+				</HorizontalStackLayout>
+
+				<HorizontalStackLayout>
+					<Button
+						x:Name="GenerateBtn"
+						BackgroundColor="ForestGreen"
+						Text="Generate"
+						Clicked="Generate"
+						WidthRequest="180" />
+
+					<Button
+						x:Name="CopyBtn"
+						BackgroundColor="ForestGreen"
+						Text="Copy to clipboard"
+						Clicked="CopyToClipboard"
+						WidthRequest="180" />
+
+					<Button
+						x:Name="SaveBtn"
+						BackgroundColor="ForestGreen"
+						Text="Save to manager"
+						Clicked="SaveToManager"
+						WidthRequest="180" />
+				</HorizontalStackLayout>
+
+			</VerticalStackLayout>
+
+		</HorizontalStackLayout>
+
+	</ScrollView>
+
+</ContentPage>
