@@ -5,8 +5,8 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:local="clr-namespace:PassM_Ger"
 	Shell.FlyoutBehavior="Disabled"
-	Shell.BackgroundColor="ForestGreen"
-	Shell.TabBarForegroundColor="ForestGreen">
+	Shell.BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
+	Shell.TabBarForegroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}">
 
 	<TabBar>
 		<ShellContent

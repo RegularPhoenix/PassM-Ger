@@ -51,7 +51,7 @@
 			<Button
 				x:Name="CopyBtn"
 				Text="Copy to clipboard"
-				BackgroundColor="ForestGreen"
+				BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 				Clicked="CopyToClipboard"
 				WidthRequest="200"
 				IsEnabled="False"/>
@@ -59,7 +59,7 @@
 			<Button
 				x:Name="ChangeNameBtn"
 				Text="Change password name"
-				BackgroundColor="ForestGreen"
+				BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 				Clicked="ChangeName"
 				WidthRequest="200"
 				IsEnabled="False"/>
@@ -67,7 +67,7 @@
 			<Button
 				x:Name="ChangePasswordBtn"
 				Text="Change password"
-				BackgroundColor="ForestGreen"
+				BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 				Clicked="ChangePassword"
 				WidthRequest="200"
 				IsEnabled="False"/>
@@ -75,7 +75,7 @@
 			<Button
 				x:Name="DeletePasswordBtn"
 				Text="Delete password"
-				BackgroundColor="ForestGreen"
+				BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 				Clicked="RemovePassword"
 				WidthRequest="200"
 				IsEnabled="False"/>

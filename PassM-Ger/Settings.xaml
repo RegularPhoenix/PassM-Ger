@@ -14,7 +14,7 @@
 		<Button
 			x:Name="HardResetBtn"
 			Margin="0,20"
-			BackgroundColor="ForestGreen"
+			BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 			Text="Delete all data"
 			Clicked="HardReset"
 			WidthRequest="200"/>

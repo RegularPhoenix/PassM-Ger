@@ -22,7 +22,7 @@
 						<HorizontalStackLayout>
 							<CheckBox
 								x:Name="IncludeCapitalsCB"
-								Color="ForestGreen"
+								Color="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 								IsChecked="True" />
 							<Label 
 								Text="Include capitals"
@@ -32,7 +32,7 @@
 						<HorizontalStackLayout>
 							<CheckBox
 								x:Name="IncludeNumbersCB"
-								Color="ForestGreen"
+								Color="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 								IsChecked="True" />
 							<Label 
 								Text="Include numbers"
@@ -42,7 +42,7 @@
 						<HorizontalStackLayout>
 							<CheckBox
 								x:Name="IncludeSymbolsCB"
-								Color="ForestGreen"
+								Color="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 								IsChecked="True" />
 							<Label 
 								Text="Include symbols"
@@ -85,21 +85,21 @@
 				<HorizontalStackLayout>
 					<Button
 						x:Name="GenerateBtn"
-						BackgroundColor="ForestGreen"
+						BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 						Text="Generate"
 						Clicked="Generate"
 						WidthRequest="180" />
 
 					<Button
 						x:Name="CopyBtn"
-						BackgroundColor="ForestGreen"
+						BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 						Text="Copy to clipboard"
 						Clicked="CopyToClipboard"
 						WidthRequest="180" />
 
 					<Button
 						x:Name="SaveBtn"
-						BackgroundColor="ForestGreen"
+						BackgroundColor="{AppThemeBinding Light=ForestGreen,Dark=OrangeRed}"
 						Text="Save to manager"
 						Clicked="SaveToManager"
 						WidthRequest="180" />

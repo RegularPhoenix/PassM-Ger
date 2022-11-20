@@ -33,7 +33,7 @@ public partial class TheVault : ContentPage
 	{
 		selectedPasswordPair = (PasswordPairs.ToList()[e.SelectedItemIndex], e.SelectedItemIndex).ToTuple();
 		ChangeNameBtn.IsEnabled = ChangePasswordBtn.IsEnabled = CopyBtn.IsEnabled = DeletePasswordBtn.IsEnabled = true;
-		ChangeNameBtn.BackgroundColor = ChangePasswordBtn.BackgroundColor = CopyBtn.BackgroundColor = DeletePasswordBtn.BackgroundColor = Color.FromArgb("#FF228B22");
+		foreach (var b in new List<Button> { ChangeNameBtn, ChangePasswordBtn, CopyBtn, DeletePasswordBtn }) b.SetAppThemeColor(BackgroundColorProperty, Color.FromArgb("#FF228B22"), Color.FromArgb("#FFFF4500"));		
 	}
 
 	private void CopyToClipboard(object sender, EventArgs e)
